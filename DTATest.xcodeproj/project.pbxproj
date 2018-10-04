@@ -7,13 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50173CBF2150842A00760A41 /* noelan script.otf in Resources */ = {isa = PBXBuildFile; fileRef = 50173CBE2150842A00760A41 /* noelan script.otf */; };
+		50173CC12155C0EC00760A41 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50173CC02155C0EC00760A41 /* ChooseViewController.swift */; };
+		50173CC32155D60400760A41 /* topicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50173CC22155D60400760A41 /* topicViewController.swift */; };
+		50173CC52155DAEF00760A41 /* WhoGodIs.txt in Resources */ = {isa = PBXBuildFile; fileRef = 50173CC42155DAEF00760A41 /* WhoGodIs.txt */; };
+		50173CCC215AA21100760A41 /* topicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50173CCB215AA21100760A41 /* topicTableViewCell.swift */; };
+		50173CCE215AA77B00760A41 /* PickTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50173CCD215AA77B00760A41 /* PickTopicViewController.swift */; };
+		50173CD02164200C00760A41 /* dailyTheoQuotes.csv in Resources */ = {isa = PBXBuildFile; fileRef = 50173CCF2164200C00760A41 /* dailyTheoQuotes.csv */; };
+		50173CD221643FE600760A41 /* dailytheo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 50173CD121643FE600760A41 /* dailytheo.txt */; };
 		502B3082213EFB10006592B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B3081213EFB10006592B2 /* AppDelegate.swift */; };
 		502B3084213EFB10006592B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B3083213EFB10006592B2 /* ViewController.swift */; };
-		502B3087213EFB10006592B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 502B3085213EFB10006592B2 /* Main.storyboard */; };
 		502B3089213EFB11006592B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 502B3088213EFB11006592B2 /* Assets.xcassets */; };
 		502B308C213EFB11006592B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 502B308A213EFB11006592B2 /* LaunchScreen.storyboard */; };
 		502B3097213EFB11006592B2 /* DTATestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B3096213EFB11006592B2 /* DTATestTests.swift */; };
 		502B30A2213EFB11006592B2 /* DTATestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B30A1213EFB11006592B2 /* DTATestUITests.swift */; };
+		502B30B0213EFBA0006592B2 /* backgroundLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B30AF213EFB9F006592B2 /* backgroundLoad.swift */; };
+		502B30B2213EFBE1006592B2 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 502B30B1213EFBE0006592B2 /* background.jpg */; };
+		502B30B4213EFC7C006592B2 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B30B3213EFC7C006592B2 /* homeViewController.swift */; };
+		502B30B6213EFC85006592B2 /* quoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B30B5213EFC85006592B2 /* quoteViewController.swift */; };
+		502B30B8213EFC8D006592B2 /* nameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B30B7213EFC8D006592B2 /* nameTableViewCell.swift */; };
+		502B30BA213EFCAE006592B2 /* dailyTheoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B30B9213EFCAE006592B2 /* dailyTheoObject.swift */; };
+		502B30BE213F0089006592B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 502B30BD213F0089006592B2 /* Main.storyboard */; };
+		502B30DA21419911006592B2 /* CharlesSpurgeon.txt in Resources */ = {isa = PBXBuildFile; fileRef = 502B30D921419911006592B2 /* CharlesSpurgeon.txt */; };
+		502B30DD2148985B006592B2 /* quoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502B30DC2148985B006592B2 /* quoteTableViewCell.swift */; };
+		502B30DF214AC138006592B2 /* starbackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 502B30DE214AC138006592B2 /* starbackground.jpg */; };
+		502B30E1214ACAA4006592B2 /* SaintAugustine.txt in Resources */ = {isa = PBXBuildFile; fileRef = 502B30E0214ACAA4006592B2 /* SaintAugustine.txt */; };
+		502B30E3214DD298006592B2 /* JohnOwen.txt in Resources */ = {isa = PBXBuildFile; fileRef = 502B30E2214DD298006592B2 /* JohnOwen.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +53,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		50173CBE2150842A00760A41 /* noelan script.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "noelan script.otf"; sourceTree = "<group>"; };
+		50173CC02155C0EC00760A41 /* ChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
+		50173CC22155D60400760A41 /* topicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topicViewController.swift; sourceTree = "<group>"; };
+		50173CC42155DAEF00760A41 /* WhoGodIs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WhoGodIs.txt; sourceTree = "<group>"; };
+		50173CCB215AA21100760A41 /* topicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = topicTableViewCell.swift; sourceTree = "<group>"; };
+		50173CCD215AA77B00760A41 /* PickTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickTopicViewController.swift; sourceTree = "<group>"; };
+		50173CCF2164200C00760A41 /* dailyTheoQuotes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dailyTheoQuotes.csv; sourceTree = "<group>"; };
+		50173CD121643FE600760A41 /* dailytheo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dailytheo.txt; sourceTree = "<group>"; };
 		502B307E213EFB10006592B2 /* DTATest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTATest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		502B3081213EFB10006592B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		502B3083213EFB10006592B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		502B3086213EFB10006592B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		502B3088213EFB11006592B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		502B308B213EFB11006592B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		502B308D213EFB11006592B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +73,20 @@
 		502B309D213EFB11006592B2 /* DTATestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DTATestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		502B30A1213EFB11006592B2 /* DTATestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTATestUITests.swift; sourceTree = "<group>"; };
 		502B30A3213EFB11006592B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		502B30AF213EFB9F006592B2 /* backgroundLoad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = backgroundLoad.swift; sourceTree = "<group>"; };
+		502B30B1213EFBE0006592B2 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		502B30B3213EFC7C006592B2 /* homeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
+		502B30B5213EFC85006592B2 /* quoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = quoteViewController.swift; sourceTree = "<group>"; };
+		502B30B7213EFC8D006592B2 /* nameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nameTableViewCell.swift; sourceTree = "<group>"; };
+		502B30B9213EFCAE006592B2 /* dailyTheoObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dailyTheoObject.swift; sourceTree = "<group>"; };
+		502B30BD213F0089006592B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../Prototype1/Main.storyboard; sourceTree = "<group>"; };
+		502B30C8213F4E31006592B2 /* bkpublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bkpublic.h; sourceTree = "<group>"; };
+		502B30D3213F4FD2006592B2 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		502B30D921419911006592B2 /* CharlesSpurgeon.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CharlesSpurgeon.txt; sourceTree = "<group>"; };
+		502B30DC2148985B006592B2 /* quoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quoteTableViewCell.swift; sourceTree = "<group>"; };
+		502B30DE214AC138006592B2 /* starbackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = starbackground.jpg; sourceTree = "<group>"; };
+		502B30E0214ACAA4006592B2 /* SaintAugustine.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SaintAugustine.txt; sourceTree = "<group>"; };
+		502B30E2214DD298006592B2 /* JohnOwen.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JohnOwen.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,13 +114,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50173CC62155DB0000760A41 /* Topics */ = {
+			isa = PBXGroup;
+			children = (
+				50173CCF2164200C00760A41 /* dailyTheoQuotes.csv */,
+				50173CD121643FE600760A41 /* dailytheo.txt */,
+				50173CC42155DAEF00760A41 /* WhoGodIs.txt */,
+			);
+			name = Topics;
+			sourceTree = "<group>";
+		};
 		502B3075213EFB10006592B2 = {
 			isa = PBXGroup;
 			children = (
+				50173CC62155DB0000760A41 /* Topics */,
+				502B30DB21419927006592B2 /* Theologians */,
 				502B3080213EFB10006592B2 /* DTATest */,
 				502B3095213EFB11006592B2 /* DTATestTests */,
 				502B30A0213EFB11006592B2 /* DTATestUITests */,
 				502B307F213EFB10006592B2 /* Products */,
+				502B30D2213F4FD1006592B2 /* Frameworks */,
+				6090EBB5D0E688D1B43B7D9B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +152,25 @@
 			isa = PBXGroup;
 			children = (
 				502B3081213EFB10006592B2 /* AppDelegate.swift */,
+				502B30B7213EFC8D006592B2 /* nameTableViewCell.swift */,
+				502B30DC2148985B006592B2 /* quoteTableViewCell.swift */,
+				50173CCB215AA21100760A41 /* topicTableViewCell.swift */,
 				502B3083213EFB10006592B2 /* ViewController.swift */,
-				502B3085213EFB10006592B2 /* Main.storyboard */,
+				502B30B3213EFC7C006592B2 /* homeViewController.swift */,
+				50173CC02155C0EC00760A41 /* ChooseViewController.swift */,
+				502B30B5213EFC85006592B2 /* quoteViewController.swift */,
+				50173CCD215AA77B00760A41 /* PickTopicViewController.swift */,
+				50173CC22155D60400760A41 /* topicViewController.swift */,
+				502B30B1213EFBE0006592B2 /* background.jpg */,
+				502B30DE214AC138006592B2 /* starbackground.jpg */,
+				502B30AF213EFB9F006592B2 /* backgroundLoad.swift */,
+				502B30B9213EFCAE006592B2 /* dailyTheoObject.swift */,
+				502B30BD213F0089006592B2 /* Main.storyboard */,
 				502B3088213EFB11006592B2 /* Assets.xcassets */,
 				502B308A213EFB11006592B2 /* LaunchScreen.storyboard */,
 				502B308D213EFB11006592B2 /* Info.plist */,
+				50173CBE2150842A00760A41 /* noelan script.otf */,
+				502B30C8213F4E31006592B2 /* bkpublic.h */,
 			);
 			path = DTATest;
 			sourceTree = "<group>";
@@ -123,6 +191,31 @@
 				502B30A3213EFB11006592B2 /* Info.plist */,
 			);
 			path = DTATestUITests;
+			sourceTree = "<group>";
+		};
+		502B30D2213F4FD1006592B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				502B30D3213F4FD2006592B2 /* libiconv.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		502B30DB21419927006592B2 /* Theologians */ = {
+			isa = PBXGroup;
+			children = (
+				502B30D921419911006592B2 /* CharlesSpurgeon.txt */,
+				502B30E0214ACAA4006592B2 /* SaintAugustine.txt */,
+				502B30E2214DD298006592B2 /* JohnOwen.txt */,
+			);
+			path = Theologians;
+			sourceTree = "<group>";
+		};
+		6090EBB5D0E688D1B43B7D9B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +286,7 @@
 				TargetAttributes = {
 					502B307D213EFB10006592B2 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					502B3091213EFB11006592B2 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -229,9 +323,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				502B30DF214AC138006592B2 /* starbackground.jpg in Resources */,
+				502B30DA21419911006592B2 /* CharlesSpurgeon.txt in Resources */,
 				502B308C213EFB11006592B2 /* LaunchScreen.storyboard in Resources */,
+				50173CBF2150842A00760A41 /* noelan script.otf in Resources */,
+				502B30BE213F0089006592B2 /* Main.storyboard in Resources */,
+				502B30E1214ACAA4006592B2 /* SaintAugustine.txt in Resources */,
+				50173CD221643FE600760A41 /* dailytheo.txt in Resources */,
+				50173CD02164200C00760A41 /* dailyTheoQuotes.csv in Resources */,
+				50173CC52155DAEF00760A41 /* WhoGodIs.txt in Resources */,
+				502B30B2213EFBE1006592B2 /* background.jpg in Resources */,
+				502B30E3214DD298006592B2 /* JohnOwen.txt in Resources */,
 				502B3089213EFB11006592B2 /* Assets.xcassets in Resources */,
-				502B3087213EFB10006592B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +359,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				502B30B6213EFC85006592B2 /* quoteViewController.swift in Sources */,
+				50173CCE215AA77B00760A41 /* PickTopicViewController.swift in Sources */,
+				502B30BA213EFCAE006592B2 /* dailyTheoObject.swift in Sources */,
+				50173CC12155C0EC00760A41 /* ChooseViewController.swift in Sources */,
 				502B3084213EFB10006592B2 /* ViewController.swift in Sources */,
+				50173CC32155D60400760A41 /* topicViewController.swift in Sources */,
+				502B30B8213EFC8D006592B2 /* nameTableViewCell.swift in Sources */,
+				502B30DD2148985B006592B2 /* quoteTableViewCell.swift in Sources */,
+				502B30B0213EFBA0006592B2 /* backgroundLoad.swift in Sources */,
+				50173CCC215AA21100760A41 /* topicTableViewCell.swift in Sources */,
 				502B3082213EFB10006592B2 /* AppDelegate.swift in Sources */,
+				502B30B4213EFC7C006592B2 /* homeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +406,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		502B3085213EFB10006592B2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				502B3086213EFB10006592B2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		502B308A213EFB11006592B2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -430,14 +535,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DTATest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DTATest",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = dta.DTATest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DTATest/DTATest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -447,14 +559,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DTATest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DTATest",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = dta.DTATest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DTATest/DTATest-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
