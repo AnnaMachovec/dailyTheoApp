@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 
 class quoteViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
@@ -15,6 +16,8 @@ class quoteViewController: UIViewController,UITableViewDelegate, UITableViewData
     @IBOutlet weak var ltextLabel:UILabel?
     @IBOutlet weak var quoteSearchBar: UISearchBar!
     
+    
+    
     //object array of quotes
     var nameofTheologian:String = "" //stores name of Theologian
     var listOfQuotes = [String]() // this is an array of Strings holding the quotes of the theologian
@@ -22,10 +25,15 @@ class quoteViewController: UIViewController,UITableViewDelegate, UITableViewData
     var fname = ""
     var lname = ""
     var isSearching = false
+    var dailyObjectList = [dailyTheoObject]()
+    //coredata
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addBackground()
+        process()
+        
         quoteTableView.backgroundColor = UIColor.clear
         seperateName(name: nameofTheologian)
         self.ftextLabel?.text = fname
@@ -37,14 +45,20 @@ class quoteViewController: UIViewController,UITableViewDelegate, UITableViewData
         quoteTableView.dataSource = self
         quoteSearchBar.delegate = self
         quoteSearchBar.returnKeyType = UIReturnKeyType.done
+        quoteSearchBar.barTintColor = .clear
         
-       
     }
+   
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
+    
+    //FAVORITES
+    
+    //FAVORITES
+    
     
  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -95,47 +109,15 @@ class quoteViewController: UIViewController,UITableViewDelegate, UITableViewData
    
 
     func makeQuoteArray(whichtext: String){
-        if whichtext == "Charles Spurgeon"{
             listOfQuotes = []
-           
-               
-        }
-        if whichtext=="Saint Augustine"{
-            listOfQuotes = []
-            let bundle = Bundle.main
-            let newpath = bundle.path(forResource: "SaintAugustine", ofType: "txt")
-            let filemgr = FileManager.default
-            if filemgr.fileExists(atPath: newpath!){
-                do {
-                    let fulltext = try String(contentsOfFile: newpath!, encoding: String.Encoding.utf8)
-                    let readings = fulltext.components(separatedBy: "\n")
-                    for i in readings{
-                        let clientdata = i.components(separatedBy: "\t")
-                        listOfQuotes.append(clientdata[0])
-                    }
-                }catch let error as NSError {
-                    print(error)
+            for i in dailyObjectList{
+                if i.theoname == whichtext{
+                    listOfQuotes.append(i.theoquote)
                 }
             }
-        }
-        if whichtext=="John Owen"{
-            listOfQuotes = []
-            let bundle = Bundle.main
-            let newpath = bundle.path(forResource: "JohnOwen", ofType: "txt")
-            let filemgr = FileManager.default
-            if filemgr.fileExists(atPath: newpath!){
-                do {
-                    let fulltext = try String(contentsOfFile: newpath!, encoding: String.Encoding.utf8)
-                    let readings = fulltext.components(separatedBy: "\n")
-                    for i in readings{
-                        let clientdata = i.components(separatedBy: "\t")
-                        listOfQuotes.append(clientdata[0])
-                    }
-                }catch let error as NSError {
-                    print(error)
-                }
-            }
-        }
+        
+        
+        
     }
     
     func seperateName(name: String){
@@ -148,8 +130,112 @@ class quoteViewController: UIViewController,UITableViewDelegate, UITableViewData
         }
     }
     
+    func process(){
+       
+      //process func still
+        let bundle = Bundle.main
+        let newpath = bundle.path(forResource: "AllQuotes", ofType: "txt")
+        let filemgr = FileManager.default
+        if filemgr.fileExists(atPath: newpath!){
+            do {
+                let fulltext = try String(contentsOfFile: newpath!, encoding: String.Encoding.utf8)
+                let readings = fulltext.components(separatedBy: "\n")
+                for i in readings{
+                    let clientdata = i.components(separatedBy: ":")
+                    if !(clientdata[0].isEmpty){
+                        var tempbool = false
+                        if clientdata[3]=="true"{
+                            tempbool = true
+                        }
+                        let temp = dailyTheoObject(name: clientdata[0], quote: clientdata[1], favorited: tempbool)
+                        dailyObjectList.append(temp)
+                        
+                    }
+                }
+            }catch let error as NSError {
+                print(error)
+            }
+        }
+        
+    }//process func
     
     //**************************************************
-  
+  /*
+    func tableView(_ tableView: UITableView,
+                            editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let favorite = UITableViewRowAction(style: .normal, title: "Favorite") { (action, indexPath) in
+            var favorites : [String] = []
+            let defaults = UserDefaults.standard
+            if let favoritesDefaults : AnyObject? = defaults.object(forKey: "favorites") as AnyObject {
+                favorites = favoritesDefaults! as! [String]
+            }
+            
+            favorites.append((tableView.cellForRow(at: indexPath)?.textLabel!.text!)!)
+            defaults.set(favorites, forKey: "favorites")
+            defaults.synchronize()
+        }
+        
+        favorite.backgroundColor = UIColor.green
+        
+        return [favorite]
+    }
+    */
+    /*
+    //write over text file here
+    func changeFavoriteToTrue(dteobject: dailyTheoObject){
+        dteobject.favorited = true
+        
+        //process func still
+        let bundle = Bundle.main
+        let newpath = bundle.path(forResource: "AllQuotes", ofType: "txt")
+        let filemgr = FileManager.default
+        if filemgr.fileExists(atPath: newpath!){
+            do {
+                let fulltext = try String(contentsOfFile: newpath!, encoding: String.Encoding.utf8)
+                let readings = fulltext.components(separatedBy: "\n")
+                for i in readings{
+                    let clientdata = i.components(separatedBy: ":")
+                    if !(clientdata[0].isEmpty){
+                        if clientdata[1]==dteobject.theoquote{
+                            let replaced = clientdata[3].replacingOccurrences(of: "false", with: "true")
+                        }
+                    }
+                }
+            }catch let error as NSError {
+                print(error)
+            }
+        }
+        
+    }
+    func changeFavoriteToFalse(dteobject: dailyTheoObject){
+        dteobject.favorited = false
+        
+        //process func still
+        let bundle = Bundle.main
+        let newpath = bundle.path(forResource: "AllQuotes", ofType: "txt")
+        let filemgr = FileManager.default
+        if filemgr.fileExists(atPath: newpath!){
+            do {
+                let fulltext = try String(contentsOfFile: newpath!, encoding: String.Encoding.utf8)
+                let readings = fulltext.components(separatedBy: "\n")
+                for i in readings{
+                    let clientdata = i.components(separatedBy: ":")
+                    if !(clientdata[0].isEmpty){
+                        if clientdata[1]==dteobject.theoquote{
+                            i.replacingOccurrences(of: "true", with: "false")
+                            
+                        }
+                    }
+                }
+            }catch let error as NSError {
+                print(error)
+            }
+        }
+        
+        
+    }
+    
+   */
 
 }

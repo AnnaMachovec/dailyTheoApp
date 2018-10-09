@@ -34,6 +34,7 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
     namesTableView.dataSource = self
     theoSearchBar.delegate = self
     theoSearchBar.returnKeyType = UIReturnKeyType.done
+    theoSearchBar.barTintColor = .clear
     
     }
     
