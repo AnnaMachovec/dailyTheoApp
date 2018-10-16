@@ -10,7 +10,7 @@
 
 import UIKit
 
-class homeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
+class nameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
     
     @IBOutlet var backgroundImage2: UIImageView!
     @IBOutlet weak var namesTableView: UITableView!
@@ -18,24 +18,22 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     var isSearching = false
     var theoQuotes = ""
-    var listofNames: [String] = ["Charles Spurgeon", "Saint Augustine","John Owen", "Martin Luther", "Erasmus Tyndale", "John Calvin", "John Wycliffe", "JC Ryle", "AW Tozer", "AW Pink", "Dietrick Bonhoeffer","Voddie Baucham", "John Knox"]
+    
+    //lists we search through
+    var listofNames: [String] = ["Charles Spurgeon", "Saint Augustine","John Owen", "Martin Luther", "John Piper","John Calvin", "John Wycliffe", "JC Ryle", "AW Tozer", "AW Pink", "Dietrich Bonhoeffer","Voddie Baucham", "John Knox"]
     var currentList: [String]!
-    var stuff = ""
-    var numoftheo = 3
-    var IP = 0
-    var changename = ""
     
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    view.addBackground()
-    namesTableView.backgroundColor = UIColor.clear
-    //currentList = listofNames
-    namesTableView.delegate = self
-    namesTableView.dataSource = self
-    theoSearchBar.delegate = self
-    theoSearchBar.returnKeyType = UIReturnKeyType.done
-    theoSearchBar.barTintColor = .clear
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.addBackground()
+        namesTableView.backgroundColor = UIColor.clear
+        namesTableView.delegate = self
+        namesTableView.dataSource = self
+        theoSearchBar.delegate = self
+        theoSearchBar.returnKeyType = UIReturnKeyType.done
+        theoSearchBar.barTintColor = .clear
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedStringKey.foregroundColor.rawValue: UIColor.white]
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,7 +41,7 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Dispose of any resources that can be recreated.
     }
     
-   
+    
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,7 +50,7 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         return  listofNames.count
-        }
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let namecell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) as? nameTableViewCell{
@@ -71,7 +69,7 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
             return UITableViewCell()
         }
         
-
+        
     }
     
     
@@ -81,10 +79,10 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.namesTableView.deselectRow(at: IP, animated: true)
         }
     }
-   
     
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       if segue.identifier == "segue",
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segue",
             let destination = segue.destination as? quoteViewController,
             let IP = namesTableView.indexPathForSelectedRow?.row
         {
@@ -99,7 +97,7 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         }
     }
-   
+    
     // This method updates filteredData based on the text in the Search Box
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text == nil || searchBar.text == ""{
@@ -112,8 +110,9 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
             namesTableView.reloadData()
         }
     }
-   
- 
+    
+    
+    
 }
 
 
