@@ -187,6 +187,7 @@
 				502B30D2213F4FD1006592B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			wrapsLines = 0;
 		};
 		502B307F213EFB10006592B2 /* Products */ = {
 			isa = PBXGroup;
