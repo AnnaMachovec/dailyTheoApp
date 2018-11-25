@@ -8,7 +8,9 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Marhaban-Regular.otf</string>
 		<string>noelan script.otf</string>
+		<string>MellowLine_Regular.OTF</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>

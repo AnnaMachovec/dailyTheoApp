@@ -8,17 +8,19 @@
 
 import UIKit
 
+//AboutViewController class is an about page as to why I did this application
 class AboutViewController: UIViewController{
-@IBOutlet var backgroundImage: UIImageView!
-@IBOutlet var whatisLabel: UILabel!
-@IBOutlet var dailytheoLabel: UILabel!
-@IBOutlet var aboutTableView: UITableView!
+    @IBOutlet var backgroundImage: UIImageView!
+    @IBOutlet var whatisLabel: UILabel!
+    @IBOutlet var dailytheoLabel: UILabel!
+    @IBOutlet var aboutTextView: UITextView!
+    @IBOutlet var aboutTableView: UITableView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addBackground()
-      
+        view.addBackground(imageName: "pew.jpg", contentMode: .scaleToFill)
+        
         // Do any additional setup after loading the view.
     }
 
@@ -26,6 +28,7 @@ class AboutViewController: UIViewController{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
  
 

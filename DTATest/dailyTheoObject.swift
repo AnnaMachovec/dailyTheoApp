@@ -8,17 +8,20 @@
 
 import Foundation
 
+//this is an object class to create DailyTheo Objects which essentially are objects containing a name,quote,if its favorited,and the topic
 
 class dailyTheoObject: NSObject{
     var theoname: String = ""
     var theoquote: String = ""
     var favorited: Bool = false
+    var topic: String = ""
   
     
-    init(name: String = "", quote: String = "", favorited: Bool){
+    init(name: String = "", quote: String = "", favorited: Bool, nametopic: String = ""){
         self.theoname = name
         self.theoquote = quote
         self.favorited = favorited
+        self.topic = nametopic
     }
     
 }

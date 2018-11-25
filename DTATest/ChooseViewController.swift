@@ -8,16 +8,21 @@
 
 import UIKit
 
+//ChooseViewController is a menu where you can search by a theologian or a topic
 class ChooseViewController: UIViewController {
-    @IBOutlet var backgroundImage: UIImageView!
+    @IBOutlet var topImage: UIImageView!
+    @IBOutlet var bottomImage: UIImageView!
+    @IBOutlet var searchlabel: UILabel!
+    @IBOutlet var bylabel: UILabel!
     @IBOutlet var searchbyTheoButton: UIButton!
     @IBOutlet var searchbyQuoteButton: UIButton!
     @IBOutlet var searchbyTopicButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addBackground()
-        // Do any additional setup after loading the view.
+        //view.addBackground(imageName: "biblecoffeecut.jpeg", contentMode: .scaleToFill)
+        topImage.image = UIImage(named: "bibletopiccut.jpeg")
+        bottomImage.image = UIImage(named: "calvinhead2.png")
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,14 +31,5 @@ class ChooseViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

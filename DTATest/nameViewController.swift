@@ -10,6 +10,7 @@
 
 import UIKit
 
+//nameViewController is where the names of all theologians can be accessed to search through and click on to view quotes
 class nameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
     
     @IBOutlet var backgroundImage2: UIImageView!
@@ -20,13 +21,13 @@ class nameViewController: UIViewController, UITableViewDelegate, UITableViewData
     var theoQuotes = ""
     
     //lists we search through
-    var listofNames: [String] = ["Charles Spurgeon", "Saint Augustine","John Owen", "Martin Luther", "John Piper","John Calvin", "John Wycliffe", "JC Ryle", "AW Tozer", "AW Pink", "Dietrich Bonhoeffer","Voddie Baucham", "John Knox"]
+    var listofNames: [String] = ["Charles Spurgeon", "Saint Augustine","John Owen","John MacArthur", "Martin Luther", "John Piper","John Calvin", "John Wycliffe", "JC Ryle", "AW Tozer", "AW Pink", "Dietrich Bonhoeffer","Voddie Baucham", "John Knox","James White", "RC Sproul","Matt Chandler"]
     var currentList: [String]!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addBackground()
+        view.addBackground(imageName: "pew.jpg", contentMode: .scaleToFill)
         namesTableView.backgroundColor = UIColor.clear
         namesTableView.delegate = self
         namesTableView.dataSource = self

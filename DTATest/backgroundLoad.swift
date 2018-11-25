@@ -9,8 +9,9 @@
 import Foundation
 import UIKit
 
+//class just creates the background to be a desired image
 extension UIView {
-    func addBackground(imageName: String = "starbackground.jpg", contentMode: UIViewContentMode = .scaleToFill) {
+    func addBackground(imageName: String, contentMode: UIViewContentMode = .scaleToFill) {
         // setup the UIImageView
         let backgroundImageView = UIImageView(frame: UIScreen.main.bounds)
         backgroundImageView.image = UIImage(named: imageName)
