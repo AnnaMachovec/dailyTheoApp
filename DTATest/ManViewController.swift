@@ -14,6 +14,7 @@ class ManViewController: UIViewController,UITableViewDelegate, UITableViewDataSo
      @IBOutlet var ManTableView: UITableView!
     @IBOutlet var SecondTableView: UITableView!
     @IBOutlet var thirdTableView: UITableView!
+    @IBOutlet var labelman: UILabel!
     
     @IBOutlet var labelone: UILabel!
     @IBOutlet var labeltwo: UILabel!
