@@ -25,7 +25,7 @@ class DailyTheoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.backgroundColor = UIColor.clear
-        topLabel.text = "Daily Quote"
+        topLabel.text = "Random Quote"
         process()
         let randomquote = Int(arc4random_uniform(UInt32(dailyObjectList.count)))
         var tempobj = dailyObjectList[randomquote]
